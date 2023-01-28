@@ -3,6 +3,7 @@
 :root {
   --Primary-brand-color: #4d5ae5;
   --Pressed-state-color: #404bbf;
+  --Success-color: #31d0aa;
   --Dark-color: #2e2f42;
   --Text-color: #434455;
   --Subtle-text-color: #8e8f99;
@@ -330,8 +331,13 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: var(--Primary-brand-color);
+}
+.team-social-link:hover,
+.team-social-link:focus {
   background-color: var(--Pressed-state-color);
 }
+
 .team-icon-social {
   width: 16px;
   height: 16px;
@@ -417,6 +423,7 @@ body {
   background-color: var(--Light-color);
   border: 1px solid #e7e9fc;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .portfolio-btn:hover,
@@ -437,11 +444,12 @@ body {
   column-gap: 24px;
   margin-top: 72px;
 }
-.projects-item:hover,
-.projects-link {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
 
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .projects-title {
   font-weight: 500;
   font-size: 20px;
@@ -462,7 +470,8 @@ body {
   display: block;
   padding: 32px 0 32px 16px;
   border: 1px solid var(--Accent-color);
-  border-width: 0 1px 1px 1px;
+  /* border-width: 0 1px 1px 1px; */
+  border-top: none;
 }
 
 /* ---Підвал сайту--- */
@@ -504,7 +513,7 @@ body {
 .footer-social-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
 }
 .footer-social-title {
   margin-bottom: 16px;
@@ -524,6 +533,11 @@ body {
   height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--Success-color);
 }
 
 .footer-icon-social {
